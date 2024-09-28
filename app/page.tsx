@@ -20,10 +20,10 @@ export default function Home() {
           height={56}
           priority
         />
-        <h1 className='text-5xl font-semibold'>Anirudh Jwala</h1>
+        <h1 className='text-4xl xl:text-5xl font-semibold'>Anirudh Jwala</h1>
         <ol className='list-inside text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]'>
           <li className='mb-2'>
-            I work on all things Frontend at{" "}
+            I work on all things Frontend at <br className='block md:hidden' />
             <code className='bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold cursor-pointer hover:underline'>
               IRIS Software Group
             </code>
