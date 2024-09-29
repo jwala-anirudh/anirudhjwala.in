@@ -24,7 +24,7 @@ export default function Home() {
         <ol className='list-inside text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]'>
           <li className='mb-2'>
             I work on all things{" "}
-            <RoughNotation type='underline' color='#df8c4a' show>
+            <RoughNotation type='highlight' color='#df8c4a' show>
               Frontend
             </RoughNotation>{" "}
             at <br className='block md:hidden' />
@@ -80,9 +80,24 @@ export default function Home() {
             width={16}
             height={16}
           />
-          <RoughNotation type='highlight' color='#df8c4a' show>
+          <RoughNotation type='underline' color='#df8c4a' show>
             read tweets
           </RoughNotation>
+        </a>
+        <a
+          className='flex items-center gap-2 hover:underline hover:underline-offset-4'
+          href='https://www.npmjs.com/package/angular2-cookie-law-banner'
+          target='_blank'
+          rel='noopener noreferrer'
+        >
+          <Image
+            aria-hidden
+            src='https://nextjs.org/icons/window.svg'
+            alt='Window icon'
+            width={16}
+            height={16}
+          />
+          dependency
         </a>
         <a
           className='flex items-center gap-2 hover:underline hover:underline-offset-4'
@@ -97,7 +112,7 @@ export default function Home() {
             width={16}
             height={16}
           />
-          latest blog
+          blog
         </a>
       </footer>
     </div>
