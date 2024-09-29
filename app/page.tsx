@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { RoughNotation } from "react-rough-notation";
 
 import anirudhImage from "../public/anirudh.png";
 import { ModeToggle } from "@/components/mode-toggle";
@@ -23,8 +24,12 @@ export default function Home() {
         <h1 className='text-4xl xl:text-5xl font-semibold'>Anirudh Jwala</h1>
         <ol className='list-inside text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]'>
           <li className='mb-2'>
-            I work on all things Frontend at <br className='block md:hidden' />
-            <code className='bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold cursor-pointer hover:underline'>
+            I work on all things{"\u00A0"}
+            <RoughNotation type='underline' color='#df8c4a' show>
+              Frontend
+            </RoughNotation>
+            {"\u00A0"}at <br className='block md:hidden' />
+            <code className='bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold'>
               IRIS Software Group
             </code>
           </li>
@@ -48,32 +53,24 @@ export default function Home() {
             Github
           </a>
           <a
-            className='rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44'
-            href='https://x.com/nirudhuuu'
+            className='rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center gap-2 hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5'
+            href='https://www.linkedin.com/in/jwala-anirudh/'
             target='_blank'
             rel='noopener noreferrer'
           >
-            Read tweets
+            <Image
+              className='invert-0 dark:invert'
+              src='https://www.svgrepo.com/show/512419/linkedin-161.svg'
+              alt='LinkedIn logomark'
+              width={16}
+              height={18}
+            />
+            LinkedIn
           </a>
         </div>
       </main>
-      {/* <footer className='row-start-3 flex gap-6 flex-wrap items-center justify-center'>
-        <a
-          className='flex items-center gap-2 hover:underline hover:underline-offset-4'
-          href='https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app'
-          target='_blank'
-          rel='noopener noreferrer'
-        >
-          <Image
-            aria-hidden
-            src='https://nextjs.org/icons/file.svg'
-            alt='File icon'
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
+      <footer className='row-start-3 flex gap-6 flex-wrap items-center justify-center'>
+        {/* <a
           className='flex items-center gap-2 hover:underline hover:underline-offset-4'
           href='https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app'
           target='_blank'
@@ -87,10 +84,25 @@ export default function Home() {
             height={16}
           />
           Examples
+        </a> */}
+        <a
+          className='flex items-center gap-2 hover:underline hover:underline-offset-4'
+          href='https://blog.learncodeonline.in/razorpay-integration-in-react'
+          target='_blank'
+          rel='noopener noreferrer'
+        >
+          <Image
+            aria-hidden
+            src='https://nextjs.org/icons/file.svg'
+            alt='File icon'
+            width={16}
+            height={16}
+          />
+          latest blog
         </a>
         <a
           className='flex items-center gap-2 hover:underline hover:underline-offset-4'
-          href='https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app'
+          href='https://x.com/nirudhuuu'
           target='_blank'
           rel='noopener noreferrer'
         >
@@ -101,9 +113,11 @@ export default function Home() {
             width={16}
             height={16}
           />
-          Go to nextjs.org →
+          <RoughNotation type='highlight' color='#df8c4a' show>
+            read tweets
+          </RoughNotation>
         </a>
-      </footer> */}
+      </footer>
     </div>
   );
 }
