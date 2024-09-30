@@ -1,30 +1,50 @@
-import { ModeToggle } from "@/components/mode-toggle";
+"use client";
+
 import Image from "next/image";
+import { useState } from "react";
 import { RoughNotation } from "react-rough-notation";
+
 import anirudhImage from "../public/anirudh.png";
 
-export default function Home() {
+// Components
+import Footer from "@/components/footer";
+import Navigation from "@/components/navigation";
+
+const Home = () => {
+  const [isHoveringHeroImage, setIsHoveringHeroImage] = useState(false);
+
   return (
     <div className='grid grid-rows-[10px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 font-[family-name:var(--font-geist-sans)]'>
-      <nav className='flex justify-between items-center w-full row-start-1'>
-        <div className='ml-auto'>
-          <ModeToggle />
-        </div>
-      </nav>
+      <Navigation />
       <main className='flex flex-col gap-8 row-start-2 items-center sm:items-start mb-4'>
-        <Image
-          className='rounded-xl transition-all duration-300 cursor-pointer filter grayscale hover:grayscale-0 hover:shadow-xl'
-          src={anirudhImage}
-          alt='Anirudh Jwala'
-          width={250}
-          height={56}
-          priority
-        />
+        <RoughNotation
+          type='circle'
+          color='#df8c4a'
+          animationDelay={100}
+          show={isHoveringHeroImage}
+          padding={30}
+        >
+          <Image
+            className='rounded-xl transition-all duration-300 cursor-pointer filter grayscale hover:grayscale-0 hover:shadow-xl hover:-rotate-3'
+            src={anirudhImage}
+            alt='Anirudh Jwala'
+            width={250}
+            height={56}
+            onMouseEnter={() => setIsHoveringHeroImage(true)}
+            onMouseLeave={() => setIsHoveringHeroImage(false)}
+            priority
+          />
+        </RoughNotation>
         <h1 className='text-4xl xl:text-5xl font-semibold'>Anirudh Jwala</h1>
         <ol className='list-inside text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]'>
           <li className='mb-2'>
             I work on all things{" "}
-            <RoughNotation type='highlight' color='#df8c4a' show>
+            <RoughNotation
+              type='highlight'
+              color='#df8c4a'
+              animationDelay={150}
+              show={!isHoveringHeroImage}
+            >
               Frontend
             </RoughNotation>{" "}
             at <br className='block md:hidden' />
@@ -66,55 +86,9 @@ export default function Home() {
           </a>
         </div>
       </main>
-      <footer className='row-start-3 flex gap-6 flex-wrap items-center justify-center'>
-        <a
-          className='flex items-center gap-2 hover:underline hover:underline-offset-4'
-          href='https://blog.learncodeonline.in/razorpay-integration-in-react'
-          target='_blank'
-          rel='noopener noreferrer'
-        >
-          <Image
-            aria-hidden
-            src='https://nextjs.org/icons/file.svg'
-            alt='File icon'
-            width={16}
-            height={16}
-          />
-          blog
-        </a>
-        <a
-          className='flex items-center gap-2 hover:underline hover:underline-offset-4'
-          href='https://x.com/nirudhuuu'
-          target='_blank'
-          rel='noopener noreferrer'
-        >
-          <Image
-            aria-hidden
-            src='https://nextjs.org/icons/globe.svg'
-            alt='Globe icon'
-            width={16}
-            height={16}
-          />
-          <RoughNotation type='underline' color='#df8c4a' show>
-            tweets
-          </RoughNotation>
-        </a>
-        <a
-          className='flex items-center gap-2 hover:underline hover:underline-offset-4'
-          href='https://www.npmjs.com/package/angular2-cookie-law-banner'
-          target='_blank'
-          rel='noopener noreferrer'
-        >
-          <Image
-            aria-hidden
-            src='https://nextjs.org/icons/window.svg'
-            alt='Window icon'
-            width={16}
-            height={16}
-          />
-          dependency
-        </a>
-      </footer>
+      <Footer isHoveringHeroImage={isHoveringHeroImage} />
     </div>
   );
-}
+};
+
+export default Home;
