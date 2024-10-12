@@ -69,7 +69,7 @@ const Home = () => {
             />
             Github
           </a>
-          <a
+          {/* <a
             className='rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center gap-2 hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5'
             href='https://www.linkedin.com/in/jwala-anirudh/'
             target='_blank'
@@ -83,6 +83,21 @@ const Home = () => {
               height={18}
             />
             LinkedIn
+          </a> */}
+          <a
+            className='rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center gap-2 hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5'
+            href='https://x.com/nirudhuuu'
+            target='_blank'
+            rel='noopener noreferrer'
+          >
+            <Image
+              className='invert-0 dark:invert'
+              src='https://www.svgrepo.com/show/513008/twitter-154.svg'
+              alt='Twitter logomark'
+              width={16}
+              height={18}
+            />
+            Twitter
           </a>
         </div>
       </main>

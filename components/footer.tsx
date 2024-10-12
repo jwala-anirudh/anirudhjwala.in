@@ -23,7 +23,7 @@ const Footer = ({ isHoveringHeroImage }: FooterProps) => {
         />
         blog
       </a>
-      <a
+      {/* <a
         className='flex items-center gap-2 hover:underline hover:underline-offset-4'
         href='https://x.com/nirudhuuu'
         target='_blank'
@@ -44,7 +44,7 @@ const Footer = ({ isHoveringHeroImage }: FooterProps) => {
         >
           tweets
         </RoughNotation>
-      </a>
+      </a> */}
       <a
         className='flex items-center gap-2 hover:underline hover:underline-offset-4'
         href='https://www.npmjs.com/package/angular2-cookie-law-banner'
@@ -58,7 +58,14 @@ const Footer = ({ isHoveringHeroImage }: FooterProps) => {
           width={16}
           height={16}
         />
-        dependency
+        <RoughNotation
+          type='underline'
+          color='#df8c4a'
+          animationDelay={500}
+          show={!isHoveringHeroImage}
+        >
+          dependency
+        </RoughNotation>
       </a>
     </footer>
   );
