@@ -21,11 +21,11 @@ const Footer = ({ isHoveringHeroImage }: FooterProps) => {
           width={16}
           height={16}
         />
-        blog
+        blogs from past
       </a>
-      {/* <a
+      <a
         className='flex items-center gap-2 hover:underline hover:underline-offset-4'
-        href='https://x.com/nirudhuuu'
+        href='https://github.com/hiteshchoudhary/apihub'
         target='_blank'
         rel='noopener noreferrer'
       >
@@ -42,9 +42,9 @@ const Footer = ({ isHoveringHeroImage }: FooterProps) => {
           animationDelay={500}
           show={!isHoveringHeroImage}
         >
-          tweets
+          opensource work
         </RoughNotation>
-      </a> */}
+      </a>
       <a
         className='flex items-center gap-2 hover:underline hover:underline-offset-4'
         href='https://www.npmjs.com/package/angular2-cookie-law-banner'
@@ -58,14 +58,7 @@ const Footer = ({ isHoveringHeroImage }: FooterProps) => {
           width={16}
           height={16}
         />
-        <RoughNotation
-          type='underline'
-          color='#df8c4a'
-          animationDelay={500}
-          show={!isHoveringHeroImage}
-        >
-          dependency
-        </RoughNotation>
+        published dependency
       </a>
     </footer>
   );
