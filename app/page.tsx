@@ -7,13 +7,13 @@ import HeroSection from "@/components/hero-section";
 
 const Home = () => {
   return (
-    <div className='grid grid-rows-[10px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 font-[family-name:var(--font-geist-sans)]'>
+    <div className='grid grid-rows-[10px_1fr_20px] items-center justify-items-center min-h-screen pb-20 gap-16 font-[family-name:var(--font-geist-sans)]'>
       <main className='flex flex-col gap-8 row-start-2 items-center sm:items-start mb-4'>
         <HeroSection />
         <h1 className='text-4xl xl:text-5xl font-semibold'>Anirudh Jwala</h1>
         <ol className='list-inside text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]'>
           <li className='mb-2'>
-            I work on all things{" "}
+            working on all things{" "}
             <RoughNotation
               type='highlight'
               color='#df8c4a'
