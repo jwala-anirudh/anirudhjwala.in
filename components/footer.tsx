@@ -1,11 +1,7 @@
 import Image from "next/image";
 import { RoughNotation } from "react-rough-notation";
 
-interface FooterProps {
-  isHoveringHeroImage: boolean;
-}
-
-const Footer = ({ isHoveringHeroImage }: FooterProps) => {
+const Footer = () => {
   return (
     <footer className='row-start-3 flex gap-6 flex-wrap items-center justify-center'>
       <a
@@ -21,11 +17,11 @@ const Footer = ({ isHoveringHeroImage }: FooterProps) => {
           width={16}
           height={16}
         />
-        blogs from past
+        blogs
       </a>
       <a
         className='flex items-center gap-2 hover:underline hover:underline-offset-4'
-        href='https://github.com/hiteshchoudhary/apihub'
+        href='https://x.com/nirudhuuu'
         target='_blank'
         rel='noopener noreferrer'
       >
@@ -40,12 +36,27 @@ const Footer = ({ isHoveringHeroImage }: FooterProps) => {
           type='underline'
           color='#df8c4a'
           animationDelay={500}
-          show={!isHoveringHeroImage}
+          show
         >
-          opensource work
+          tweets
         </RoughNotation>
       </a>
       <a
+        className='flex items-center gap-2 hover:underline hover:underline-offset-4'
+        href='https://github.com/hiteshchoudhary/apihub'
+        target='_blank'
+        rel='noopener noreferrer'
+      >
+        <Image
+          aria-hidden
+          src='https://nextjs.org/icons/window.svg'
+          alt='Window icon'
+          width={16}
+          height={16}
+        />
+        opensource work
+      </a>
+      {/* <a
         className='flex items-center gap-2 hover:underline hover:underline-offset-4'
         href='https://www.npmjs.com/package/angular2-cookie-law-banner'
         target='_blank'
@@ -58,8 +69,8 @@ const Footer = ({ isHoveringHeroImage }: FooterProps) => {
           width={16}
           height={16}
         />
-        published dependency
-      </a>
+        interesting dependency
+      </a> */}
     </footer>
   );
 };
