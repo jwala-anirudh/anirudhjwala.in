@@ -1,33 +1,37 @@
-"use client";
-
-import Image from "next/image";
-import { useState } from "react";
 import { RoughNotation } from "react-rough-notation";
 
-import anirudhImage from "../public/anirudh.png";
+import HeroImage from "@/components/hero-image";
+import Footer from "@/components/footer";
 
 const HeroSection = () => {
-  const [isHoveringHeroImage, setIsHoveringHeroImage] = useState(false);
-
   return (
-    <RoughNotation
-      type='circle'
-      color='#df8c4a'
-      animationDelay={100}
-      show={isHoveringHeroImage}
-      padding={30}
-    >
-      <Image
-        className='rounded-xl transition-all duration-300 cursor-pointer filter grayscale hover:grayscale-0 hover:shadow-xl hover:-rotate-3'
-        src={anirudhImage}
-        alt='Anirudh Jwala'
-        width={250}
-        height={56}
-        onMouseEnter={() => setIsHoveringHeroImage(true)}
-        onMouseLeave={() => setIsHoveringHeroImage(false)}
-        priority
-      />
-    </RoughNotation>
+    <div className='flex flex-col lg:min-h-screen'>
+      <main className='flex flex-col gap-6 items-center sm:items-start pl-0 sm:px-14 md:pl-20 flex-grow'>
+        <div className='mt-16'>
+          <HeroImage />
+        </div>
+        <h1 className='text-4xl xl:text-5xl font-bold'>Anirudh Jwala</h1>
+        <ol className='list-inside text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]'>
+          <li className='mb-2'>
+            I work on all things{" "}
+            <RoughNotation
+              type='highlight'
+              color='#df8c4a'
+              animationDelay={150}
+              show
+            >
+              Frontend
+            </RoughNotation>{" "}
+            at <br className='block md:hidden' />
+            IRIS Software
+          </li>
+          <li className='mb-2'>Truly love working on Web</li>
+        </ol>
+      </main>
+      <div className='hidden lg:block lg:mx-8 lg:mb-16'>
+        <Footer />
+      </div>
+    </div>
   );
 };
 

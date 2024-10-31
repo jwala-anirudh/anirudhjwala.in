@@ -1,76 +1,26 @@
-import Image from "next/image";
-import { RoughNotation } from "react-rough-notation";
+import FooterDialog from "@/components/footer-dialog";
 
 const Footer = () => {
   return (
-    <footer className='row-start-3 flex gap-6 flex-wrap items-center justify-center'>
-      <a
-        className='flex items-center gap-2 hover:underline hover:underline-offset-4'
-        href='https://blog.learncodeonline.in/razorpay-integration-in-react'
-        target='_blank'
-        rel='noopener noreferrer'
-      >
-        <Image
-          aria-hidden
-          src='https://nextjs.org/icons/file.svg'
-          alt='File icon'
-          width={16}
-          height={16}
-        />
-        blogs
-      </a>
-      <a
-        className='flex items-center gap-2 hover:underline hover:underline-offset-4'
-        href='https://x.com/nirudhuuu'
-        target='_blank'
-        rel='noopener noreferrer'
-      >
-        <Image
-          aria-hidden
-          src='https://nextjs.org/icons/globe.svg'
-          alt='Globe icon'
-          width={16}
-          height={16}
-        />
-        <RoughNotation
-          type='underline'
-          color='#df8c4a'
-          animationDelay={500}
-          show
-        >
-          tweets
-        </RoughNotation>
-      </a>
-      <a
-        className='flex items-center gap-2 hover:underline hover:underline-offset-4'
-        href='https://github.com/hiteshchoudhary/apihub'
-        target='_blank'
-        rel='noopener noreferrer'
-      >
-        <Image
-          aria-hidden
-          src='https://nextjs.org/icons/window.svg'
-          alt='Window icon'
-          width={16}
-          height={16}
-        />
-        opensource
-      </a>
-      {/* <a
-        className='flex items-center gap-2 hover:underline hover:underline-offset-4'
-        href='https://www.npmjs.com/package/angular2-cookie-law-banner'
-        target='_blank'
-        rel='noopener noreferrer'
-      >
-        <Image
-          aria-hidden
-          src='https://nextjs.org/icons/window.svg'
-          alt='Window icon'
-          width={16}
-          height={16}
-        />
-        interesting dependency
-      </a> */}
+    <footer className='flex gap-6 flex-wrap items-center justify-center'>
+      <FooterDialog
+        icon='https://nextjs.org/icons/file.svg'
+        iconDescription='File'
+        actionTitle='Terms and Conditions'
+        source='https://www.termsfeed.com/live/9697d379-f518-471c-9612-57ee4e1bafe2'
+      />
+      <FooterDialog
+        icon='https://nextjs.org/icons/globe.svg'
+        iconDescription='Globe'
+        actionTitle='Privacy Policy'
+        source='https://www.termsfeed.com/live/b4163d8b-add7-455c-97b4-f81553de43e6'
+      />
+      <FooterDialog
+        icon='https://nextjs.org/icons/window.svg'
+        iconDescription='Window'
+        actionTitle='Refunds/Cancellations'
+        source='https://www.termsfeed.com/live/37a45dc7-1713-403c-8f28-c9d9b84bd7f6'
+      />
     </footer>
   );
 };
