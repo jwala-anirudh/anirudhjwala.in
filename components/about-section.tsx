@@ -20,16 +20,16 @@ const AboutSection = () => {
             !isExpanded ? "line-clamp-3" : ""
           }`}
         >
-          Hey there! I'm a software engineer with a knack for building
+          Hey there! I&apos;m a software engineer with a knack for building
           efficient, intuitive digital experiences and a passion for turning
           complex challenges into elegant solutions. With nearly four years of
-          hands-on experience, I’ve had the privilege of working on projects
-          that make a real difference. At IRIS Software Group, I’m part of the
-          team shaping IRIS Elements, a cloud-based platform that’s simplifying
-          life for accountants everywhere. From building AML dashboards for
-          secure client assessments to crafting a reusable signup flow that
-          reduced onboarding drop-offs by 60%, I’m all about creating solutions
-          that work, scale, and delight.
+          hands-on experience, I&apos;ve had the privilege of working on
+          projects that make a real difference. At IRIS Software Group, I&apos;m
+          part of the team shaping IRIS Elements, a cloud-based platform
+          that&apos;s simplifying life for accountants everywhere. From building
+          AML dashboards for secure client assessments to crafting a reusable
+          signup flow that reduced onboarding drop-offs by 60%, I&apos;m all
+          about creating solutions that work, scale, and delight.
         </p>
         {isExpanded && (
           <>
@@ -43,11 +43,12 @@ const AboutSection = () => {
               my skills and broadened my perspective on what tech can do.
             </p>
             <p className='text-base text-justify mb-2'>
-              Beyond the 9-to-5, you’ll find me contributing to open-source
+              Beyond the 9-to-5, you&apos;ll find me contributing to open-source
               projects, sharing my experiences through blogs, and continually
-              tinkering with new tech. Whether I’m mastering API integrations or
-              crafting visualizations, I’m constantly learning, exploring, and
-              pushing the boundaries of what’s possible.
+              tinkering with new tech. Whether I&apos;m mastering API
+              integrations or crafting visualizations, I&apos;m constantly
+              learning, exploring, and pushing the boundaries of what&apos;s
+              possible.
             </p>
           </>
         )}
