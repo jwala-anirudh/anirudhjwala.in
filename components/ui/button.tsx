@@ -25,6 +25,8 @@ const buttonVariants = cva(
           "bg-[#0a66c2] text-primary-foreground shadow-sm hover:bg-[#004182]/90",
         instagram:
           "bg-[#c13584] text-primary-foreground shadow-sm hover:bg-[#833ab4]/90",
+        discord:
+          "bg-[#7289da] text-primary-foreground shadow-sm hover:bg-[#5865f2]/90",
       },
       size: {
         default: "h-9 px-4 py-2",
