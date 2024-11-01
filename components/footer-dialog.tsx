@@ -43,7 +43,10 @@ const FooterDialog = ({
         <AlertDialogHeader>
           <AlertDialogTitle></AlertDialogTitle>
           <AlertDialogDescription>
-            <iframe src={source} className='w-[800px] h-[500px]' />
+            <iframe
+              src={source}
+              className='w-[250px] h-[50vh] md:w-[800px] md:h-[500px]'
+            />
           </AlertDialogDescription>
         </AlertDialogHeader>
         <AlertDialogFooter>
