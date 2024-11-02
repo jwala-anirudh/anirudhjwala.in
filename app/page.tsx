@@ -58,7 +58,7 @@ const Home = () => {
         >
           <BodySection />
         </div>
-        <div className='block md:hidden'>
+        <div className='block lg:hidden'>
           <Footer />
         </div>
       </div>
