@@ -14,18 +14,33 @@ const Home = () => {
     const heroSection = heroSectionRef.current;
     const bodySection = bodySectionRef.current;
 
-    if (heroSection && bodySection) {
-      const syncScroll = (e: WheelEvent) => {
-        e.preventDefault();
+    const mediaQuery = window.matchMedia("(min-width: 1024px)");
+
+    const syncScroll = (e: WheelEvent) => {
+      e.preventDefault();
+      if (bodySection) {
         bodySection.scrollTop += e.deltaY;
-      };
+      }
+    };
 
-      heroSection.addEventListener("wheel", syncScroll, { passive: false });
+    const handleMediaChange = (e: MediaQueryListEvent) => {
+      if (e.matches) {
+        heroSection?.addEventListener("wheel", syncScroll, { passive: false });
+      } else {
+        heroSection?.removeEventListener("wheel", syncScroll);
+      }
+    };
 
-      return () => {
-        heroSection.removeEventListener("wheel", syncScroll);
-      };
+    if (mediaQuery.matches) {
+      heroSection?.addEventListener("wheel", syncScroll, { passive: false });
     }
+
+    mediaQuery.addEventListener("change", handleMediaChange);
+
+    return () => {
+      heroSection?.removeEventListener("wheel", syncScroll);
+      mediaQuery.removeEventListener("change", handleMediaChange);
+    };
   }, []);
 
   return (

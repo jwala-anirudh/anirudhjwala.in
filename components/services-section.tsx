@@ -28,7 +28,7 @@ const ServicesSection = () => {
     <section className='mb-4'>
       <h2 className='text-xl font-semibold text-left mb-3'>Services</h2>
       <div className='flex flex-wrap gap-2 mb-2'>
-        <Card className='flex-1 min-w-[300px]'>
+        <Card className='flex-1 w-full md:min-w-[300px]'>
           <CardHeader>
             <CardTitle>Web App Development</CardTitle>
             <CardDescription>
@@ -43,7 +43,7 @@ const ServicesSection = () => {
             <Button onClick={servicePayNow}>Pay now</Button>
           </CardFooter>
         </Card>
-        <Card className='flex-1 min-w-[300px]'>
+        <Card className='flex-1 w-full md:min-w-[300px]'>
           <CardHeader>
             <CardTitle>Mobile App Development</CardTitle>
             <CardDescription>
@@ -57,7 +57,7 @@ const ServicesSection = () => {
             <Button onClick={servicePayNow}>Pay now</Button>
           </CardFooter>
         </Card>
-        <Card className='flex-1 min-w-[300px]'>
+        <Card className='flex-1 w-full md:min-w-[300px]'>
           <CardHeader>
             <CardTitle>Consultation</CardTitle>
             <CardDescription>
@@ -71,7 +71,7 @@ const ServicesSection = () => {
             <Button onClick={servicePayNow}>Pay now</Button>
           </CardFooter>
         </Card>
-        <Card className='flex-1 min-w-[300px]'>
+        <Card className='flex-1 w-full md:min-w-[300px]'>
           <CardHeader>
             <CardTitle>Quick Connect</CardTitle>
             <CardDescription>
