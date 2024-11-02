@@ -27,7 +27,7 @@ const ServicesSection = () => {
   return (
     <section className='mb-4'>
       <h2 className='text-xl font-semibold text-left mb-3'>Services</h2>
-      <div className='flex flex-wrap gap-2 mb-2'>
+      <div className='flex flex-wrap gap-4 mb-2'>
         <Card className='flex-1 w-full md:min-w-[300px]'>
           <CardHeader>
             <CardTitle>Web App Development</CardTitle>
