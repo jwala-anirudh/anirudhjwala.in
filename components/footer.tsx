@@ -2,7 +2,7 @@ import FooterDialog from "@/components/footer-dialog";
 
 const Footer = () => {
   return (
-    <footer className='flex gap-6 flex-wrap items-center justify-center mx-12'>
+    <footer className='flex gap-6 flex-wrap items-center justify-center mx-12 mb-8 md:mb-0'>
       <FooterDialog
         icon='https://nextjs.org/icons/file.svg'
         iconDescription='File'

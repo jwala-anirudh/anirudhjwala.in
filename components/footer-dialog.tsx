@@ -26,7 +26,7 @@ const FooterDialog = ({
     <AlertDialog>
       <AlertDialogTrigger>
         <a
-          className='flex items-center gap-2 hover:underline hover:underline-offset-4'
+          className='flex items-center gap-2 hover:underline hover:underline-offset-4 text-xs'
           rel='noopener noreferrer'
         >
           <img
