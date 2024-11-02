@@ -16,7 +16,7 @@ const AboutSection = () => {
       <h2 className='text-xl font-semibold text-left mb-3'>About</h2>
       <div className='pr-4'>
         <p
-          className={`text-base text-justify mb-2 ${
+          className={`text-base text-left md:text-justify mb-2 ${
             !isExpanded ? "line-clamp-3" : ""
           }`}
         >
@@ -33,7 +33,7 @@ const AboutSection = () => {
         </p>
         {isExpanded && (
           <>
-            <p className='text-base text-justify mb-2'>
+            <p className='text-base text-left md:text-justify mb-2'>
               Before IRIS, I dove deep into the world of finance tech at
               Capgemini, collaborating with DBS Bank to develop an Anti-Money
               Laundering system that helped analysts detect and track suspicious
@@ -42,7 +42,7 @@ const AboutSection = () => {
               brought real efficiency to our workflows. Each project has honed
               my skills and broadened my perspective on what tech can do.
             </p>
-            <p className='text-base text-justify mb-2'>
+            <p className='text-base text-left md:text-justify mb-2'>
               Beyond the 9-to-5, you&apos;ll find me contributing to open-source
               projects, sharing my experiences through blogs, and continually
               tinkering with new tech. Whether I&apos;m mastering API
