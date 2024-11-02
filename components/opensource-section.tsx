@@ -1,7 +1,7 @@
 import Link from "next/link";
 import GitHubCalendar from "react-github-calendar";
 
-import githubLogo from "@/public/github.svg";
+import githubLogo from "@/public/svg/github.svg";
 
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";

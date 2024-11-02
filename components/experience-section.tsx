@@ -5,9 +5,9 @@ import {
   CardHeader,
 } from "@/components/ui/card";
 
-import irisLogo from "@/public/iris.svg";
-import capgeminiLogo from "@/public/capgemini.svg";
-import sportsVisionLogo from "@/public/sportsvision.svg";
+import irisLogo from "@/public/svg/iris.svg";
+import capgeminiLogo from "@/public/svg/capgemini.svg";
+import sportsVisionLogo from "@/public/svg/sportsvision.svg";
 
 const ExperienceSection = () => {
   return (

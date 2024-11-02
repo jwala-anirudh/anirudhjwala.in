@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { RoughNotation } from "react-rough-notation";
 
-import anirudhImage from "@/public/anirudh.png";
+import anirudhImage from "@/public/images/anirudh.png";
 
 const HeroImage = () => {
   const [isHoveringHeroImage, setIsHoveringHeroImage] = useState(false);

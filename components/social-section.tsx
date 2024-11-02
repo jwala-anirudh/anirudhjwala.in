@@ -1,9 +1,9 @@
 import Link from "next/link";
 
-import twitterLogo from "@/public/twitter.svg";
-import linkedInLogo from "@/public/linkedin.svg";
-import instagramLogo from "@/public/instagram.svg";
-import discordLogo from "@/public/discord.svg";
+import twitterLogo from "@/public/svg/twitter.svg";
+import linkedInLogo from "@/public/svg/linkedin.svg";
+import instagramLogo from "@/public/svg/instagram.svg";
+import discordLogo from "@/public/svg/discord.svg";
 
 import {
   Card,
