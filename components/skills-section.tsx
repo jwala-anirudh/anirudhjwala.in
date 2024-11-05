@@ -1,6 +1,11 @@
+"use client";
+
+import { useState } from "react";
 import { Badge } from "@/components/ui/badge";
 
 const SkillsSection = () => {
+  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+
   const skillsList = [
     "Java",
     "TypeScript",
@@ -31,8 +36,10 @@ const SkillsSection = () => {
         {skillsList.map((skill, index) => (
           <Badge
             key={index}
-            variant='outline'
+            variant={hoveredIndex === index ? "secondary" : "outline"}
             className='rounded-full font-normal text-sm cursor-pointer'
+            onMouseEnter={() => setHoveredIndex(index)}
+            onMouseLeave={() => setHoveredIndex(null)}
           >
             {skill}
           </Badge>
