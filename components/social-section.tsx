@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 import twitterLogo from "@/public/svg/twitter.svg";
@@ -21,8 +22,8 @@ const SocialSection = () => {
         {/* Twitter */}
         <Card className='rounded-2xl w-full lg:w-48'>
           <CardHeader className='pb-0 text-sm'>
-            <img
-              src={twitterLogo.src}
+            <Image
+              src={twitterLogo}
               alt='twitter'
               width={40}
               height={40}
@@ -47,8 +48,8 @@ const SocialSection = () => {
         {/* LinkedIn */}
         <Card className='rounded-2xl w-full lg:w-48'>
           <CardHeader className='pb-0 text-sm'>
-            <img
-              src={linkedInLogo.src}
+            <Image
+              src={linkedInLogo}
               alt='twitter'
               width={40}
               height={40}
@@ -76,8 +77,8 @@ const SocialSection = () => {
         {/* Instagram */}
         <Card className='rounded-2xl w-full lg:w-48'>
           <CardHeader className='pb-0 text-sm'>
-            <img
-              src={instagramLogo.src}
+            <Image
+              src={instagramLogo}
               alt='twitter'
               width={40}
               height={40}
@@ -105,8 +106,8 @@ const SocialSection = () => {
         {/* Discord */}
         <Card className='rounded-2xl w-full lg:w-48'>
           <CardHeader className='pb-0 text-sm'>
-            <img
-              src={discordLogo.src}
+            <Image
+              src={discordLogo}
               alt='twitter'
               width={40}
               height={40}

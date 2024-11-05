@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 import {
   Card,
   CardContent,
@@ -16,8 +18,8 @@ const ContactSection = () => {
       <div className='flex flex-wrap gap-2 mb-8'>
         <Card className='rounded-2xl w-full lg:w-48'>
           <CardHeader className='pb-0 text-base font-semibold'>
-            <img
-              src={emailLogo.src}
+            <Image
+              src={emailLogo}
               alt='email'
               width={40}
               height={40}
@@ -33,8 +35,8 @@ const ContactSection = () => {
         </Card>
         <Card className='rounded-2xl w-full lg:w-48'>
           <CardHeader className='pb-0 text-base font-semibold'>
-            <img
-              src={addressLogo.src}
+            <Image
+              src={addressLogo}
               alt='address'
               width={40}
               height={40}
@@ -51,8 +53,8 @@ const ContactSection = () => {
         </Card>
         <Card className='rounded-2xl w-full lg:w-48'>
           <CardHeader className='pb-0 text-base font-semibold'>
-            <img
-              src={phoneLogo.src}
+            <Image
+              src={phoneLogo}
               alt='phone'
               width={40}
               height={40}

@@ -1,5 +1,7 @@
 "use client";
 
+import Image from "next/image";
+
 import { useState } from "react";
 import { RoughNotation } from "react-rough-notation";
 
@@ -16,9 +18,9 @@ const HeroImage = () => {
       show={isHoveringHeroImage}
       padding={30}
     >
-      <img
+      <Image
         className='rounded-xl transition-all duration-300 cursor-pointer filter grayscale hover:grayscale-0 hover:shadow-xl hover:-rotate-3'
-        src={anirudhImage.src}
+        src={anirudhImage}
         alt='Anirudh Jwala'
         width={250}
         height={56}

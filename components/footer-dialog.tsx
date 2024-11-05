@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 import {
   AlertDialog,
   AlertDialogCancel,
@@ -29,7 +31,7 @@ const FooterDialog = ({
           className='flex items-center gap-2 hover:underline hover:underline-offset-4 text-xs'
           rel='noopener noreferrer'
         >
-          <img
+          <Image
             aria-hidden
             src={icon}
             alt={iconDescription}

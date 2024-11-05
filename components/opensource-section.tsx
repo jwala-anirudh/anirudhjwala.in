@@ -1,4 +1,6 @@
+import Image from "next/image";
 import Link from "next/link";
+
 import GitHubCalendar from "react-github-calendar";
 
 import githubLogo from "@/public/svg/github.svg";
@@ -16,8 +18,8 @@ const OpenSourceSection = () => {
           <CardHeader className='pb-6 text-sm'>
             <div className='flex justify-between'>
               <section>
-                <img
-                  src={githubLogo.src}
+                <Image
+                  src={githubLogo}
                   alt='twitter'
                   width={40}
                   height={40}

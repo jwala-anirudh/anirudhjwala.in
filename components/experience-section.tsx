@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 import {
   Card,
   CardContent,
@@ -17,8 +19,8 @@ const ExperienceSection = () => {
         {/* IRIS Software Group */}
         <Card className='rounded-2xl w-full lg:w-48'>
           <CardHeader className='pb-0 text-sm'>
-            <img
-              src={irisLogo.src}
+            <Image
+              src={irisLogo}
               alt='IRIS Software Group'
               className='mb-2 w-10 h-10 object-contain'
             />
@@ -36,8 +38,8 @@ const ExperienceSection = () => {
         {/* Capgemini */}
         <Card className='rounded-2xl w-full lg:w-48'>
           <CardHeader className='pb-0 text-sm'>
-            <img
-              src={capgeminiLogo.src}
+            <Image
+              src={capgeminiLogo}
               alt='Capgemini'
               className='mb-2 w-6 h-10 object-contain'
             />
@@ -55,8 +57,8 @@ const ExperienceSection = () => {
         {/* Sports Vision */}
         <Card className='rounded-2xl w-full lg:w-48'>
           <CardHeader className='pb-0 text-sm'>
-            <img
-              src={sportsVisionLogo.src}
+            <Image
+              src={sportsVisionLogo}
               alt='Sports Vision'
               className='mb-2 w-10 h-10 object-contain'
             />
