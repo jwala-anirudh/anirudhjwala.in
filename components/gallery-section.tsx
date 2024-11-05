@@ -22,6 +22,69 @@ import photo11 from "@/public/images/photo_11.webp";
 import photo12 from "@/public/images/photo_12.webp";
 
 const GallerySection = () => {
+  const photos = [
+    {
+      id: 1,
+      src: photo1,
+      alt: "Photo 1",
+    },
+    {
+      id: 2,
+      src: photo2,
+      alt: "Photo 2",
+    },
+    {
+      id: 3,
+      src: photo3,
+      alt: "Photo 3",
+    },
+    {
+      id: 4,
+      src: photo4,
+      alt: "Photo 4",
+    },
+    {
+      id: 5,
+      src: photo5,
+      alt: "Photo 5",
+    },
+    {
+      id: 6,
+      src: photo6,
+      alt: "Photo 6",
+    },
+    {
+      id: 7,
+      src: photo7,
+      alt: "Photo 7",
+    },
+    {
+      id: 8,
+      src: photo8,
+      alt: "Photo 8",
+    },
+    {
+      id: 9,
+      src: photo9,
+      alt: "Photo 9",
+    },
+    {
+      id: 10,
+      src: photo10,
+      alt: "Photo 10",
+    },
+    {
+      id: 11,
+      src: photo11,
+      alt: "Photo 11",
+    },
+    {
+      id: 12,
+      src: photo12,
+      alt: "Photo 12",
+    },
+  ];
+
   return (
     <section>
       <h2 className='text-xl font-semibold text-left mb-3'>Gallery</h2>
@@ -31,90 +94,18 @@ const GallerySection = () => {
         modules={[EffectCards]}
         className='w-60 h-80 my-8'
       >
-        <SwiperSlide className='flex items-center justify-center rounded-lg'>
-          <Image
-            src={photo1}
-            alt='Photo 1'
-            className='w-full h-full object-cover rounded-lg'
-          />
-        </SwiperSlide>
-        <SwiperSlide className='flex items-center justify-center rounded-lg'>
-          <Image
-            src={photo2}
-            alt='Photo 2'
-            className='w-full h-full object-cover rounded-lg'
-          />
-        </SwiperSlide>
-        <SwiperSlide className='flex items-center justify-center rounded-lg'>
-          <Image
-            src={photo3}
-            alt='Photo 3'
-            className='w-full h-full object-cover rounded-lg'
-          />
-        </SwiperSlide>
-        <SwiperSlide className='flex items-center justify-center rounded-lg'>
-          <Image
-            src={photo4}
-            alt='Photo 4'
-            className='w-full h-full object-cover rounded-lg'
-          />
-        </SwiperSlide>
-        <SwiperSlide className='flex items-center justify-center rounded-lg'>
-          <Image
-            src={photo5}
-            alt='Photo 5'
-            className='w-full h-full object-cover rounded-lg'
-          />
-        </SwiperSlide>
-        <SwiperSlide className='flex items-center justify-center rounded-lg'>
-          <Image
-            src={photo6}
-            alt='Photo 6'
-            className='w-full h-full object-cover rounded-lg'
-          />
-        </SwiperSlide>
-        <SwiperSlide className='flex items-center justify-center rounded-lg'>
-          <Image
-            src={photo7}
-            alt='Photo 7'
-            className='w-full h-full object-cover rounded-lg'
-          />
-        </SwiperSlide>
-        <SwiperSlide className='flex items-center justify-center rounded-lg'>
-          <Image
-            src={photo8}
-            alt='Photo 8'
-            className='w-full h-full object-cover rounded-lg'
-          />
-        </SwiperSlide>
-        <SwiperSlide className='flex items-center justify-center rounded-lg'>
-          <Image
-            src={photo9}
-            alt='Photo 9'
-            className='w-full h-full object-cover rounded-lg'
-          />
-        </SwiperSlide>
-        <SwiperSlide className='flex items-center justify-center rounded-lg'>
-          <Image
-            src={photo10}
-            alt='Photo 10'
-            className='w-full h-full object-cover rounded-lg'
-          />
-        </SwiperSlide>
-        <SwiperSlide className='flex items-center justify-center rounded-lg'>
-          <Image
-            src={photo11}
-            alt='Photo 11'
-            className='w-full h-full object-cover rounded-lg'
-          />
-        </SwiperSlide>
-        <SwiperSlide className='flex items-center justify-center rounded-lg'>
-          <Image
-            src={photo12}
-            alt='Photo 12'
-            className='w-full h-full object-cover rounded-lg'
-          />
-        </SwiperSlide>
+        {photos.map((photo) => (
+          <SwiperSlide
+            key={photo.id}
+            className='flex items-center justify-center rounded-lg'
+          >
+            <Image
+              src={photo.src}
+              alt={photo.alt}
+              className='w-full h-full object-cover rounded-lg'
+            />
+          </SwiperSlide>
+        ))}
       </Swiper>
     </section>
   );
