@@ -6,18 +6,18 @@ import "swiper/css/effect-cards";
 import { EffectCards } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
-import photo1 from "@/public/images/photo_1.png";
-import photo2 from "@/public/images/photo_2.png";
-import photo3 from "@/public/images/photo_3.png";
-import photo4 from "@/public/images/photo_4.png";
-import photo5 from "@/public/images/photo_5.png";
-import photo6 from "@/public/images/photo_6.png";
-import photo7 from "@/public/images/photo_7.png";
-import photo8 from "@/public/images/photo_8.png";
-import photo9 from "@/public/images/photo_9.png";
-import photo10 from "@/public/images/photo_10.png";
-import photo11 from "@/public/images/photo_11.png";
-import photo12 from "@/public/images/photo_12.png";
+import photo1 from "@/public/images/photo_1.webp";
+import photo2 from "@/public/images/photo_2.webp";
+import photo3 from "@/public/images/photo_3.webp";
+import photo4 from "@/public/images/photo_4.webp";
+import photo5 from "@/public/images/photo_5.webp";
+import photo6 from "@/public/images/photo_6.webp";
+import photo7 from "@/public/images/photo_7.webp";
+import photo8 from "@/public/images/photo_8.webp";
+import photo9 from "@/public/images/photo_9.webp";
+import photo10 from "@/public/images/photo_10.webp";
+import photo11 from "@/public/images/photo_11.webp";
+import photo12 from "@/public/images/photo_12.webp";
 
 const GallerySection = () => {
   return (
