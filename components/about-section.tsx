@@ -22,14 +22,13 @@ const AboutSection = () => {
         >
           Hey there! I&apos;m a software engineer with a knack for building
           efficient, intuitive digital experiences and a passion for turning
-          complex challenges into elegant solutions. With nearly four years of
-          hands-on experience, I&apos;ve had the privilege of working on
-          projects that make a real difference. At IRIS Software Group, I&apos;m
-          part of the team shaping IRIS Elements, a cloud-based platform
-          that&apos;s simplifying life for accountants everywhere. From building
-          AML dashboards for secure client assessments to crafting a reusable
-          signup flow that reduced onboarding drop-offs by 60%, I&apos;m all
-          about creating solutions that work, scale, and delight.
+          complex challenges into elegant solutions. I&apos;ve had the privilege
+          of working on projects that make a real difference. At IRIS Software
+          Group, I&apos;m part of the team shaping IRIS Elements, a cloud-based
+          platform that&apos;s simplifying life for accountants everywhere. From
+          building AML dashboards for secure client assessments to crafting a
+          reusable signup flow that reduced onboarding drop-offs by 60%,
+          I&apos;m all about creating solutions that work, scale, and delight.
         </p>
         {isExpanded && (
           <>

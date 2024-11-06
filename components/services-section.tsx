@@ -25,7 +25,7 @@ const ServicesSection = () => {
     {
       id: 2,
       title: "Mobile App Development",
-      description: "Mobile application development in React Native",
+      description: "Mobile application development in React Native & Flutter",
       price: 36000,
     },
     {
@@ -66,7 +66,9 @@ const ServicesSection = () => {
               <CardDescription>{service.description}</CardDescription>
             </CardHeader>
             <CardContent>
-              <p className='text-lg font-semibold'>₹{service.price}</p>
+              <p className='text-lg font-semibold'>
+                ₹{service.price.toLocaleString("en-IN")}
+              </p>
             </CardContent>
             <CardFooter className='flex justify-between'>
               <Button onClick={servicePayNow}>Pay now</Button>
