@@ -14,12 +14,12 @@ const BodySection = () => {
       <SkillsSection />
       <ExperienceSection />
       <OpenSourceSection />
-      <ServicesSection />
-      <SocialSection />
       <section className='grid grid-cols-1 xl:grid-cols-2 gap-4'>
+        <SocialSection />
         <GallerySection />
-        <ContactSection />
+        {/* <ContactSection /> */}
       </section>
+      <ServicesSection />
     </section>
   );
 };
