@@ -4,7 +4,6 @@ import { useEffect, useRef } from "react";
 
 import HeroSection from "@/components/hero-section";
 import BodySection from "@/components/body-section";
-import Footer from "@/components/footer";
 
 const Home = () => {
   const heroSectionRef = useRef<HTMLDivElement>(null);
@@ -58,9 +57,9 @@ const Home = () => {
         >
           <BodySection />
         </div>
-        <div className='block lg:hidden'>
+        {/* <div className='block lg:hidden'>
           <Footer />
-        </div>
+        </div> */}
       </div>
     </div>
   );
