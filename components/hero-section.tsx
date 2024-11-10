@@ -18,7 +18,7 @@ const HeroSection = () => {
             animationDelay={150}
             show
           >
-            Frontend
+            Software
           </RoughNotation>{" "}
           at <br className='block md:hidden' />
           IRIS Software

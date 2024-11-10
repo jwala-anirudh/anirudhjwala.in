@@ -19,7 +19,7 @@ const geistMono = localFont({
 export const metadata: Metadata = {
   title: "Anirudh Jwala",
   description:
-    "Software Engineer with 4 years of frontend development experience in startups and MNCs, currently building accounting software at IRIS. Specialized in sports tech, banking (AML), and tax solutions.",
+    "Software Engineer with 4 years of software engineering experience in startups and MNCs, currently building accounting software at IRIS. Specialized in sports tech, banking (AML), and tax solutions.",
 };
 
 export default function RootLayout({
