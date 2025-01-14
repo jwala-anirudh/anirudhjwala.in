@@ -11,7 +11,6 @@ const nextConfig = {
     newNextLinkBehavior: true,
     scrollRestoration: true,
   },
-  output: "export"
 }
 
 const withMDX = nextMDX({
