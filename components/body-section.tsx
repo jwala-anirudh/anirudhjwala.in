@@ -7,17 +7,15 @@ import SocialSection from "@/components/social-section";
 
 const BodySection = () => {
   return (
-    <section className='px-6 py-4 lg:mt-8 xl:mt-10'>
+    <section className="px-6 py-4 lg:mt-8 xl:mt-10">
       <AboutSection />
       <SkillsSection />
       <ExperienceSection />
       <OpenSourceSection />
-      <section className='grid grid-cols-1 xl:grid-cols-2 gap-4'>
+      <section className="grid grid-cols-1 xl:grid-cols-2 gap-4">
         <SocialSection />
         <GallerySection />
-        {/* <ContactSection /> */}
       </section>
-      {/* <ServicesSection /> */}
     </section>
   );
 };

@@ -87,22 +87,22 @@ const GallerySection = () => {
 
   return (
     <section>
-      <h2 className='text-xl font-semibold text-left mb-3'>Gallery</h2>
+      <h2 className="text-xl font-semibold text-left mb-3">Gallery</h2>
       <Swiper
-        effect='cards'
+        effect="cards"
         grabCursor={true}
         modules={[EffectCards]}
-        className='w-60 h-80 my-8'
+        className="w-60 h-80 my-8"
       >
         {photos.map((photo) => (
           <SwiperSlide
             key={photo.id}
-            className='flex items-center justify-center rounded-lg'
+            className="flex items-center justify-center rounded-lg"
           >
             <Image
               src={photo.src}
               alt={photo.alt}
-              className='w-full h-full object-cover rounded-lg'
+              className="w-full h-full object-cover rounded-lg"
             />
           </SwiperSlide>
         ))}

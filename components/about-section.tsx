@@ -13,8 +13,8 @@ const AboutSection = () => {
 
   return (
     <section>
-      <h2 className='text-xl font-semibold text-left mb-3'>About</h2>
-      <div className='pr-4'>
+      <h2 className="text-xl font-semibold text-left mb-3">About</h2>
+      <div className="pr-4">
         <p
           className={`text-base text-left md:text-justify mb-2 ${
             !isExpanded ? "line-clamp-3" : ""
@@ -32,7 +32,7 @@ const AboutSection = () => {
         </p>
         {isExpanded && (
           <>
-            <p className='text-base text-left md:text-justify mb-2'>
+            <p className="text-base text-left md:text-justify mb-2">
               Before IRIS, I dove deep into the world of finance tech at
               Capgemini, collaborating with DBS Bank to develop an Anti-Money
               Laundering system that helped analysts detect and track suspicious
@@ -45,8 +45,8 @@ const AboutSection = () => {
         )}
         <Button
           onClick={toggleExpand}
-          variant='link'
-          className='p-0 mb-2 text-blue-500'
+          variant="link"
+          className="p-0 mb-2 text-blue-500"
         >
           {isExpanded ? "Read less" : "Read more"}
         </Button>

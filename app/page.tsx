@@ -43,23 +43,20 @@ const Home = () => {
   }, []);
 
   return (
-    <div className='flex font-[family-name:var(--font-geist-sans)]'>
-      <div className='flex flex-col lg:flex-row w-full'>
+    <div className="flex font-[family-name:var(--font-geist-sans)]">
+      <div className="flex flex-col lg:flex-row w-full">
         <div
           ref={heroSectionRef}
-          className='lg:sticky lg:top-0 lg:h-screen lg:flex-none'
+          className="lg:sticky lg:top-0 lg:h-screen lg:flex-none"
         >
           <HeroSection />
         </div>
         <div
           ref={bodySectionRef}
-          className='flex-grow lg:h-screen overflow-auto'
+          className="flex-grow lg:h-screen overflow-auto"
         >
           <BodySection />
         </div>
-        {/* <div className='block lg:hidden'>
-          <Footer />
-        </div> */}
       </div>
     </div>
   );

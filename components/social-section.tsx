@@ -2,8 +2,8 @@ import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
 
 import twitterLogo from "@/public/svg/twitter.svg";
-// import linkedInLogo from "@/public/svg/linkedin.svg";
-// import instagramLogo from "@/public/svg/instagram.svg";
+import linkedInLogo from "@/public/svg/linkedin.svg";
+import instagramLogo from "@/public/svg/instagram.svg";
 import discordLogo from "@/public/svg/discord.svg";
 
 import {
@@ -14,41 +14,47 @@ import {
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 
-const SocialSection = () => {
-  type SocialVariant = "twitter" | "linkedin" | "instagram" | "discord";
+type SocialVariant = "twitter" | "linkedin" | "instagram" | "discord";
 
-  const socials: {
-    id: number;
-    name: string;
-    handle: string;
-    link: string;
-    logo: StaticImageData;
-    variant: SocialVariant;
-  }[] = [
+type SocialButton = {
+  id: number;
+  name: string;
+  handle: string;
+  link: string;
+  logo: StaticImageData;
+  variant: SocialVariant;
+  label: string;
+};
+
+const SocialSection = () => {
+  const socials: SocialButton[] = [
     {
       id: 1,
-      name: "X (formerly Twitter)",
+      name: "X (Twitter)",
       handle: "@niurdhuuu",
       link: "https://x.com/nirudhuuu",
       logo: twitterLogo,
       variant: "twitter",
+      label: "Follow",
     },
-    // {
-    //   id: 2,
-    //   name: "LinkedIn",
-    //   handle: "jwala-anirudh",
-    //   link: "https://www.linkedin.com/in/jwala-anirudh/",
-    //   logo: linkedInLogo,
-    //   variant: "linkedin",
-    // },
-    // {
-    //   id: 3,
-    //   name: "Instagram",
-    //   handle: "anirudhjwala",
-    //   link: "https://www.instagram.com/anirudhjwala/",
-    //   logo: instagramLogo,
-    //   variant: "instagram",
-    // },
+    {
+      id: 2,
+      name: "LinkedIn",
+      handle: "jwala-anirudh",
+      link: "https://www.linkedin.com/in/jwala-anirudh/",
+      logo: linkedInLogo,
+      variant: "linkedin",
+      label: "Connect",
+    },
+    {
+      id: 3,
+      name: "Instagram",
+      handle: "anirudhjwala",
+      link: "https://www.instagram.com/anirudhjwala/",
+      logo: instagramLogo,
+      variant: "instagram",
+      label: "Follow",
+    },
     {
       id: 4,
       name: "Discord",
@@ -56,6 +62,7 @@ const SocialSection = () => {
       link: "https://discord.gg/6vYVwNAR",
       logo: discordLogo,
       variant: "discord",
+      label: "Add Friend",
     },
   ];
 
@@ -84,7 +91,7 @@ const SocialSection = () => {
                   className="rounded-full text-xs font-semibold"
                   variant={social.variant}
                 >
-                  {social.name === "Discord" ? "Add Friend" : "Connect"}
+                  {social.label}
                 </Button>
               </Link>
             </CardContent>
