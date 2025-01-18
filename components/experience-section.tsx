@@ -11,6 +11,19 @@ import irisLogo from "@/public/svg/iris.svg";
 import capgeminiLogo from "@/public/svg/capgemini.svg";
 import sportsVisionLogo from "@/public/svg/sportsvision.svg";
 
+const calculateDuration = (startDate: string, endDate: string) => {
+  const start = new Date(startDate);
+  const end = endDate === "Present" ? new Date() : new Date(endDate);
+
+  const diff = new Date(end.getTime() - start.getTime());
+  const years = diff.getUTCFullYear() - 1970;
+  const months = diff.getUTCMonth() + 1;
+
+  return `${years} yr${years !== 1 ? "s" : ""} ${months} mo${
+    months !== 1 ? "s" : ""
+  }`;
+};
+
 const ExperienceSection = () => {
   const experiences = [
     {
@@ -20,7 +33,6 @@ const ExperienceSection = () => {
       position: "Software Engineer",
       startDate: "Sep 2023",
       endDate: "Present",
-      duration: "1 yr 3 mos",
     },
     {
       id: 2,
@@ -29,7 +41,6 @@ const ExperienceSection = () => {
       position: "Senior Software Engineer",
       startDate: "Mar 2021",
       endDate: "Sep 2023",
-      duration: "2 yrs 7 mos",
     },
     {
       id: 3,
@@ -38,7 +49,6 @@ const ExperienceSection = () => {
       position: "Software Engineer",
       startDate: "Oct 2018",
       endDate: "Feb 2021",
-      duration: "2 yrs 5 mos",
     },
   ];
 
@@ -62,7 +72,7 @@ const ExperienceSection = () => {
               </CardDescription>
               <CardDescription className="pb-3 text-sm">
                 {experience.startDate} - {experience.endDate} <br />{" "}
-                {experience.duration}
+                {calculateDuration(experience.startDate, experience.endDate)}
               </CardDescription>
             </CardContent>
           </Card>
