@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { parse, differenceInYears, differenceInMonths } from "date-fns";
 
 import {
   Card,
@@ -12,12 +13,12 @@ import capgeminiLogo from "@/public/svg/capgemini.svg";
 import sportsVisionLogo from "@/public/svg/sportsvision.svg";
 
 const calculateDuration = (startDate: string, endDate: string) => {
-  const start = new Date(startDate);
-  const end = endDate === "Present" ? new Date() : new Date(endDate);
+  const start = parse(startDate, "MMM yyyy", new Date());
+  const end =
+    endDate === "Present" ? new Date() : parse(endDate, "MMM yyyy", new Date());
 
-  const diff = new Date(end.getTime() - start.getTime());
-  const years = diff.getUTCFullYear() - 1970;
-  const months = diff.getUTCMonth() + 1;
+  const years = differenceInYears(end, start);
+  const months = (differenceInMonths(end, start) % 12) + 1;
 
   return `${years} yr${years !== 1 ? "s" : ""} ${months} mo${
     months !== 1 ? "s" : ""
