@@ -19,13 +19,14 @@ const buttonVariants = cva(
           "bg-secondary text-secondary-foreground shadow-sm hover:bg-secondary/80",
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
-        twitter: "bg-black text-primary-foreground shadow-sm hover:bg-black/90",
+        twitter: 
+          "bg-gray-800 text-gray-100 border border-gray-700 hover:bg-gray-700/90",
         linkedin:
-          "bg-[#0a66c2] text-primary-foreground shadow-sm hover:bg-[#004182]/90",
+          "bg-[#0a66c2]/80 text-gray-100 border border-[#0a66c2]/30 hover:bg-[#0a66c2]",
         instagram:
-          "bg-[#c13584] text-primary-foreground shadow-sm hover:bg-[#833ab4]/90",
+          "bg-[#c13584]/80 text-gray-100 border border-[#c13584]/30 hover:bg-[#c13584]",
         discord:
-          "bg-[#7289da] text-primary-foreground shadow-sm hover:bg-[#5865f2]/90",
+          "bg-[#7289da]/80 text-gray-100 border border-[#7289da]/30 hover:bg-[#7289da]",
       },
       size: {
         default: "h-9 px-4 py-2",
