@@ -8,8 +8,8 @@ const HeroSection = () => {
       <div className="mt-16">
         <HeroImage />
       </div>
-      <h1 className="text-4xl xl:text-5xl font-bold font-[family-name:var(--font-departure-mono)]">Anirudh Jwala</h1>
-      <ol className="list-inside text-sm text-center sm:text-left font-[family-name:var(--font-pp-fragment-glare-light)]">
+      <h1 className="text-4xl xl:text-5xl font-bold">Anirudh Jwala</h1>
+      <ol className="list-inside text-sm text-center sm:text-left font-[family-name:var(--font-departure-mono)]">
         <li className="mb-2">
           I work on all things{" "}
           <RoughNotation
