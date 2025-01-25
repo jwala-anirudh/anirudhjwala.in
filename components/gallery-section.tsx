@@ -87,7 +87,7 @@ const GallerySection = () => {
 
   return (
     <section>
-      <h2 className="text-xl font-semibold text-left mb-3">Gallery</h2>
+      <h2 className="text-xl font-semibold text-left mb-3 font-[family-name:var(--font-departure-mono)]">Gallery</h2>
       <Swiper
         effect="cards"
         grabCursor={true}

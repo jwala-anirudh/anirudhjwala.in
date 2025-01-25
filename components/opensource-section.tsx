@@ -11,7 +11,7 @@ import { Card, CardContent, CardHeader } from "@/components/ui/card";
 const OpenSourceSection = () => {
   return (
     <section>
-      <h2 className="text-xl font-semibold text-left mb-3">Opensource</h2>
+      <h2 className="text-xl font-semibold text-left mb-3 font-[family-name:var(--font-departure-mono)]">Opensource</h2>
       <div className="flex flex-wrap mb-8">
         <Card className="rounded-3xl cursor-pointer w-full 2xl:w-fit">
           <CardHeader className="pb-6 text-sm">

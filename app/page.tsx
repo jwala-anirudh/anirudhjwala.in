@@ -43,7 +43,7 @@ const Home = () => {
   }, []);
 
   return (
-    <div className="flex font-[family-name:var(--font-geist-sans)]">
+    <div className="flex font-[family-name:var(--font-pp-fragment-glare-light)]">
       <div className="flex flex-col lg:flex-row w-full">
         <div
           ref={heroSectionRef}

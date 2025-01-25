@@ -13,7 +13,7 @@ const AboutSection = () => {
 
   return (
     <section>
-      <h2 className="text-xl font-semibold text-left mb-3">About</h2>
+      <h2 className="text-xl font-semibold text-left mb-3 font-[family-name:var(--font-departure-mono)]">About</h2>
       <div className="pr-4">
         <p
           className={`text-base text-left md:text-justify mb-2 ${

@@ -7,15 +7,13 @@ import { Toaster } from "@/components/ui/sonner";
 
 import "./globals.css";
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
+const ppFragmentGlareLight = localFont({
+  src: "./fonts/pp-fragment-glare-light.ttf",
+  variable: "--font-pp-fragment-glare-light",
 });
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
+const departureMono = localFont({
+  src: "./fonts/departure-mono.woff",
+  variable: "--font-departure-mono",
 });
 
 export const metadata: Metadata = {
@@ -32,7 +30,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${ppFragmentGlareLight.variable} ${departureMono.variable} antialiased`}
       >
         {children}
         <Toaster />
