@@ -55,11 +55,13 @@ const ExperienceSection = () => {
 
   return (
     <section>
-      <h2 className="text-xl font-semibold text-foreground mb-3 font-[family-name:var(--font-departure-mono)]">Experience</h2>
+      <h2 className="text-2xl font-semibold text-foreground mb-3 font-[family-name:var(--font-departure-mono)]">
+        Experience
+      </h2>
       <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-none lg:flex lg:flex-wrap mb-8">
         {experiences.map((experience) => (
-          <Card 
-            key={experience.id} 
+          <Card
+            key={experience.id}
             className="rounded-2xl w-full lg:w-52 bg-gray-600 border-gray-500"
           >
             <CardHeader className="pb-0 text-sm">

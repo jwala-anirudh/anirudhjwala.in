@@ -31,7 +31,9 @@ const SkillsSection = () => {
 
   return (
     <section>
-      <h2 className="text-xl font-semibold text-left mb-3 font-[family-name:var(--font-departure-mono)]">Skills</h2>
+      <h2 className="text-2xl font-semibold text-left mb-3 font-[family-name:var(--font-departure-mono)]">
+        Skills
+      </h2>
       <div className="flex flex-wrap gap-2 mb-8">
         {skillsList.map((skill, index) => (
           <Badge

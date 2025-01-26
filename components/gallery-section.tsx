@@ -87,12 +87,14 @@ const GallerySection = () => {
 
   return (
     <section>
-      <h2 className="text-xl font-semibold text-left mb-3 font-[family-name:var(--font-departure-mono)]">Gallery</h2>
+      <h2 className="text-2xl font-semibold text-left mb-3 font-[family-name:var(--font-departure-mono)]">
+        Gallery
+      </h2>
       <Swiper
         effect="cards"
         grabCursor={true}
         modules={[EffectCards]}
-        className="w-60 h-80 my-8"
+        className="w-[14.5rem] h-80 my-8"
       >
         {photos.map((photo) => (
           <SwiperSlide
