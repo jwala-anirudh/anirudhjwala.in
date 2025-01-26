@@ -83,7 +83,7 @@ const SocialSection = () => {
               {social.name}
             </CardHeader>
             <CardContent>
-              <CardDescription className="pb-3 text-sm">
+              <CardDescription className="pb-3 text-sm font-[family-name:var(--font-departure-mono)]">
                 {social.handle}
               </CardDescription>
               <Link href={social.link} target="_blank">

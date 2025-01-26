@@ -28,7 +28,7 @@ const OpenSourceSection = () => {
               </section>
               <Link href={"https://github.com/jwala-anirudh"} target="_blank">
                 <Button
-                  className="rounded text-xs font-bold mt-4"
+                  className="rounded text-xs font-bold mt-4 font-[family-name:var(--font-departure-mono)]"
                   variant="outline"
                 >
                   Follow

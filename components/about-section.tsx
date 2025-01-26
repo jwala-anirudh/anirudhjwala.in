@@ -13,7 +13,9 @@ const AboutSection = () => {
 
   return (
     <section>
-      <h2 className="text-xl font-semibold text-left mb-3 font-[family-name:var(--font-departure-mono)]">About</h2>
+      <h2 className="text-xl font-semibold text-left mb-3 font-[family-name:var(--font-departure-mono)]">
+        About
+      </h2>
       <div className="pr-4">
         <p
           className={`text-base text-left md:text-justify mb-2 ${
@@ -23,8 +25,11 @@ const AboutSection = () => {
           Hey there! I&apos;m a software engineer with a knack for building
           efficient, intuitive digital experiences and a passion for turning
           complex challenges into elegant solutions. I&apos;ve had the privilege
-          of working on projects that make a real difference. At IRIS Software
-          Group, I&apos;m part of the team shaping IRIS Elements, a cloud-based
+          of working on projects that make a real difference. At{" "}
+          <span className="font-[family-name:var(--font-departure-mono)]">
+            IRIS Software Group
+          </span>
+          , I&apos;m part of the team shaping IRIS Elements, a cloud-based
           platform that&apos;s simplifying life for accountants everywhere. From
           building AML dashboards for secure client assessments to crafting a
           reusable signup flow that reduced onboarding drop-offs by 60%,
@@ -33,13 +38,20 @@ const AboutSection = () => {
         {isExpanded && (
           <>
             <p className="text-base text-left md:text-justify mb-2">
-              Before IRIS, I dove deep into the world of finance tech at
-              Capgemini, collaborating with DBS Bank to develop an Anti-Money
-              Laundering system that helped analysts detect and track suspicious
-              activities. I’m proud of leading the charge to streamline
-              multi-regional codebases and building custom CI/CD pipelines that
-              brought real efficiency to our workflows. Each project has honed
-              my skills and broadened my perspective on what tech can do.
+              Before IRIS, I dove deep into the world of finance tech at{" "}
+              <span className="font-[family-name:var(--font-departure-mono)]">
+                Capgemini
+              </span>
+              , collaborating with{" "}
+              <span className="font-[family-name:var(--font-departure-mono)]">
+                DBS Bank
+              </span>{" "}
+              to develop an Anti-Money Laundering system that helped analysts
+              detect and track suspicious activities. I’m proud of leading the
+              charge to streamline multi-regional codebases and building custom
+              CI/CD pipelines that brought real efficiency to our workflows.
+              Each project has honed my skills and broadened my perspective on
+              what tech can do.
             </p>
           </>
         )}

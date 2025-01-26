@@ -71,7 +71,7 @@ const ExperienceSection = () => {
               <span className="text-gray-300">{experience.company}</span>
             </CardHeader>
             <CardContent>
-              <CardDescription className="pb-1 text-base font-semibold text-gray-100">
+              <CardDescription className="pb-1 text-base font-semibold text-gray-100 font-[family-name:var(--font-departure-mono)]">
                 {experience.position}
               </CardDescription>
               <CardDescription className="pb-3 text-sm text-gray-300">
