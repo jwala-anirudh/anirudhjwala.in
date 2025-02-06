@@ -4,7 +4,7 @@ import HeroImage from "@/components/hero-image";
 
 const HeroSection = () => {
   return (
-    <main className="flex flex-col gap-6 items-center sm:items-start pl-0 sm:px-14 md:pl-20 flex-grow">
+    <main className="flex flex-col gap-6 items-center sm:items-start pl-0 sm:px-14 md:pl-20 grow">
       <div className="mt-16">
         <HeroImage />
       </div>

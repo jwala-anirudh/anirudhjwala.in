@@ -53,7 +53,7 @@ const Home = () => {
         </div>
         <div
           ref={bodySectionRef}
-          className="flex-grow lg:h-screen overflow-auto"
+          className="grow lg:h-screen overflow-auto"
         >
           <BodySection />
         </div>
