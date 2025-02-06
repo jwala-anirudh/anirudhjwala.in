@@ -86,7 +86,7 @@ const GallerySection = () => {
   ];
 
   return (
-    <section>
+    <section className="overflow-hidden">
       <h2 className="text-2xl font-semibold text-left mb-3 font-[family-name:var(--font-departure-mono)]">
         Gallery
       </h2>
@@ -94,7 +94,7 @@ const GallerySection = () => {
         effect="cards"
         grabCursor={true}
         modules={[EffectCards]}
-        className="w-[14.5rem] h-80 my-8"
+        className="w-60 h-80 my-8 overflow-hidden"
       >
         {photos.map((photo) => (
           <SwiperSlide

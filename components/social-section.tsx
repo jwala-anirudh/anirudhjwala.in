@@ -71,7 +71,7 @@ const SocialSection = () => {
       <h2 className="text-2xl font-semibold text-left mb-3 font-[family-name:var(--font-departure-mono)]">
         Socials
       </h2>
-      <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-none lg:flex lg:flex-wrap mb-8">
+      <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-none lg:flex lg:flex-wrap mb-8">
         {socials.map((social) => (
           <Card key={social.id} className="rounded-2xl w-full lg:w-48">
             <CardHeader className="pb-0 text-sm">
