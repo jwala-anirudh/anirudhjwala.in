@@ -2,13 +2,28 @@
 
 import Image from "next/image";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { RoughNotation } from "react-rough-notation";
 
 import anirudhImage from "@/public/images/anirudh.webp";
 
 const HeroImage = () => {
   const [isHoveringHeroImage, setIsHoveringHeroImage] = useState(false);
+  const [theme, setTheme] = useState<"dark" | "light">("dark");
+
+  useEffect(() => {
+    // Set initial theme class on document
+    document.documentElement.classList.add(theme);
+  }, []);
+
+  const toggleTheme = () => {
+    const newTheme = theme === "dark" ? "light" : "dark";
+    // Remove old theme class
+    document.documentElement.classList.remove(theme);
+    // Add new theme class
+    document.documentElement.classList.add(newTheme);
+    setTheme(newTheme);
+  };
 
   return (
     <RoughNotation
@@ -26,6 +41,8 @@ const HeroImage = () => {
         height={56}
         onMouseEnter={() => setIsHoveringHeroImage(true)}
         onMouseLeave={() => setIsHoveringHeroImage(false)}
+        onClick={toggleTheme}
+        title={`Click to switch to ${theme === 'dark' ? 'light' : 'dark'} mode`}
       />
     </RoughNotation>
   );
