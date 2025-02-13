@@ -5,8 +5,6 @@ import {
   CardDescription,
   CardHeader,
 } from "@/components/ui/card";
-import discordLogo from "@/public/svg/discord.svg";
-import instagramLogo from "@/public/svg/instagram.svg";
 import linkedInLogo from "@/public/svg/linkedin.svg";
 import twitterLogo from "@/public/svg/twitter.svg";
 import Image, { StaticImageData } from "next/image";
@@ -43,24 +41,6 @@ const SocialSection = () => {
       logo: linkedInLogo,
       variant: "linkedin",
       label: "Connect",
-    },
-    {
-      id: 3,
-      name: "Instagram",
-      handle: "anirudhjwala",
-      link: "https://www.instagram.com/anirudhjwala/",
-      logo: instagramLogo,
-      variant: "instagram",
-      label: "Follow",
-    },
-    {
-      id: 4,
-      name: "Discord",
-      handle: "anirudhjwala",
-      link: "https://discord.gg/6vYVwNAR",
-      logo: discordLogo,
-      variant: "discord",
-      label: "Add Friend",
     },
   ];
 
