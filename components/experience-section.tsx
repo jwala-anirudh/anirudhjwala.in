@@ -1,5 +1,4 @@
-'use client';
-
+import { useTheme } from '@/context/ThemeContext'; // Import useTheme hook
 import { differenceInMonths, differenceInYears, parse } from 'date-fns';
 import Image from 'next/image';
 
@@ -9,11 +8,9 @@ import {
   CardDescription,
   CardHeader,
 } from '@/components/ui/card';
-
 import capgeminiLogo from '@/public/svg/capgemini.svg';
 import irisLogo from '@/public/svg/iris.svg';
 import sportsVisionLogo from '@/public/svg/sportsvision.svg';
-import { useEffect, useState } from 'react';
 
 const calculateDuration = (startDate: string, endDate: string) => {
   const start = parse(startDate, 'MMM yyyy', new Date());
@@ -56,30 +53,7 @@ const ExperienceSection = () => {
     },
   ];
 
-  const [theme, setTheme] = useState<'dark' | 'light'>('dark');
-
-  useEffect(() => {
-    // Check initial theme
-    const isDark = document.documentElement.classList.contains('dark');
-    setTheme(isDark ? 'dark' : 'light');
-
-    // Optional: Setup observer for theme changes
-    const observer = new MutationObserver((mutations) => {
-      mutations.forEach((mutation) => {
-        if (mutation.attributeName === 'class') {
-          const isDark = document.documentElement.classList.contains('dark');
-          setTheme(isDark ? 'dark' : 'light');
-        }
-      });
-    });
-
-    observer.observe(document.documentElement, {
-      attributes: true,
-      attributeFilter: ['class'],
-    });
-
-    return () => observer.disconnect();
-  }, []);
+  const { theme } = useTheme();
 
   return (
     <section>
