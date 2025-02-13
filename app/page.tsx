@@ -50,15 +50,15 @@ const Home = () => {
   }, []);
 
   return (
-    <div className='flex font-[family-name:var(--font-pp-fragment-glare-light)]'>
-      <div className='flex flex-col lg:flex-row w-full'>
+    <div className="flex font-[family-name:var(--font-pp-fragment-glare-light)]">
+      <div className="flex flex-col lg:flex-row w-full">
         <div
           ref={heroSectionRef}
-          className='lg:sticky lg:top-0 lg:h-screen lg:flex-none'
+          className="lg:sticky lg:top-0 lg:h-screen lg:flex-none"
         >
           <HeroSection />
         </div>
-        <div ref={bodySectionRef} className='grow lg:h-screen overflow-auto'>
+        <div ref={bodySectionRef} className="grow lg:h-screen overflow-auto">
           <BodySection />
         </div>
       </div>

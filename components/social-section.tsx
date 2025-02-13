@@ -66,29 +66,29 @@ const SocialSection = () => {
 
   return (
     <section>
-      <h2 className='text-2xl font-semibold text-left mb-3 font-[family-name:var(--font-departure-mono)]'>
+      <h2 className="text-2xl font-semibold text-left mb-3 font-[family-name:var(--font-departure-mono)]">
         Socials
       </h2>
-      <div className='grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-none lg:flex lg:flex-wrap mb-8'>
+      <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-none lg:flex lg:flex-wrap mb-8">
         {socials.map((social) => (
-          <Card key={social.id} className='rounded-2xl w-full lg:w-48'>
-            <CardHeader className='pb-0 text-sm'>
+          <Card key={social.id} className="rounded-2xl w-full lg:w-48">
+            <CardHeader className="pb-0 text-sm">
               <Image
                 src={social.logo}
                 alt={social.name}
                 width={40}
                 height={40}
-                className='rounded-[10px] mb-2'
+                className="rounded-[10px] mb-2"
               />
               {social.name}
             </CardHeader>
             <CardContent>
-              <CardDescription className='pb-3 text-sm font-[family-name:var(--font-departure-mono)]'>
+              <CardDescription className="pb-3 text-sm font-[family-name:var(--font-departure-mono)]">
                 {social.handle}
               </CardDescription>
-              <Link href={social.link} target='_blank'>
+              <Link href={social.link} target="_blank">
                 <Button
-                  className='rounded-full text-xs font-semibold'
+                  className="rounded-full text-xs font-semibold"
                   variant={social.variant}
                 >
                   {social.label}

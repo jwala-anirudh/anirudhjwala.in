@@ -26,14 +26,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang='en'>
+    <html lang="en">
       <body
         className={`${ppFragmentGlareLight.variable} ${departureMono.variable} antialiased`}
       >
         <ThemeProvider>
           {children}
           <Toaster />
-          <GoogleAnalytics gaId='G-G1BEZ46KNJ' />
+          <GoogleAnalytics gaId="G-G1BEZ46KNJ" />
         </ThemeProvider>
       </body>
     </html>

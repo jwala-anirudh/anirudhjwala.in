@@ -3,29 +3,29 @@
 import { Badge } from "@/components/ui/badge";
 import { JSX, useState } from "react";
 // Skill icons
+import { AiOutlineApi } from "react-icons/ai";
+import { BiLogoPostgresql, BiLogoSpringBoot } from "react-icons/bi";
 import {
-  FaJava,
-  FaReact,
   FaAngular,
   FaGitAlt,
+  FaJava,
   FaJenkins,
+  FaReact,
 } from "react-icons/fa";
 import {
-  SiTypescript,
-  SiNextdotjs,
   SiExpress,
-  SiNgrx,
-  SiRedux,
-  SiPagekit,
-  SiStencil,
   SiJasmine,
   SiJest,
   SiMongodb,
+  SiNextdotjs,
+  SiNgrx,
+  SiPagekit,
+  SiRedux,
+  SiStencil,
   SiTeamcity,
+  SiTypescript,
 } from "react-icons/si";
-import { BiLogoSpringBoot, BiLogoPostgresql } from "react-icons/bi";
 import { TbBrandReactNative } from "react-icons/tb";
-import { AiOutlineApi } from "react-icons/ai";
 
 interface Skill {
   name: string;
