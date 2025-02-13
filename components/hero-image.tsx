@@ -10,6 +10,14 @@ const HeroImage = () => {
   const [isHoveringHeroImage, setIsHoveringHeroImage] = useState(false);
   const { theme, toggleTheme } = useTheme();
 
+  const handleInteractionStart = () => {
+    setIsHoveringHeroImage(true);
+  };
+
+  const handleInteractionEnd = () => {
+    setIsHoveringHeroImage(false);
+  };
+
   return (
     <RoughNotation
       type="circle"
@@ -19,15 +27,22 @@ const HeroImage = () => {
       padding={30}
     >
       <Image
-        className="rounded-xl transition-all duration-300 cursor-pointer filter grayscale hover:grayscale-0 hover:shadow-xl hover:-rotate-3"
+        className={`rounded-xl transition-all duration-300 cursor-pointer filter
+          ${
+            isHoveringHeroImage
+              ? "grayscale-0 -rotate-3 shadow-xl"
+              : "grayscale"
+          }`}
         src={anirudhImage}
         alt="Anirudh Jwala"
         width={250}
         height={56}
-        onMouseEnter={() => setIsHoveringHeroImage(true)}
-        onMouseLeave={() => setIsHoveringHeroImage(false)}
+        onMouseEnter={handleInteractionStart}
+        onMouseLeave={handleInteractionEnd}
+        onTouchStart={handleInteractionStart}
+        onTouchEnd={handleInteractionEnd}
         onClick={toggleTheme}
-        title={`Click to switch to ${theme === 'dark' ? 'light' : 'dark'} mode`}
+        title={`Click to switch to ${theme === "dark" ? "light" : "dark"} mode`}
       />
     </RoughNotation>
   );
