@@ -1,14 +1,9 @@
 "use client";
 
-import "swiper/css";
-import "swiper/css/effect-cards";
-
-import Image from "next/image";
-
-import { EffectCards } from "swiper/modules";
-import { Swiper, SwiperSlide } from "swiper/react";
-
 import photo1 from "@/public/images/photo_1.webp";
+import photo10 from "@/public/images/photo_10.webp";
+import photo11 from "@/public/images/photo_11.webp";
+import photo12 from "@/public/images/photo_12.webp";
 import photo2 from "@/public/images/photo_2.webp";
 import photo3 from "@/public/images/photo_3.webp";
 import photo4 from "@/public/images/photo_4.webp";
@@ -17,9 +12,11 @@ import photo6 from "@/public/images/photo_6.webp";
 import photo7 from "@/public/images/photo_7.webp";
 import photo8 from "@/public/images/photo_8.webp";
 import photo9 from "@/public/images/photo_9.webp";
-import photo10 from "@/public/images/photo_10.webp";
-import photo11 from "@/public/images/photo_11.webp";
-import photo12 from "@/public/images/photo_12.webp";
+import Image from "next/image";
+import "swiper/css";
+import "swiper/css/effect-cards";
+import { EffectCards } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
 
 const GallerySection = () => {
   const photos = [
@@ -86,25 +83,25 @@ const GallerySection = () => {
   ];
 
   return (
-    <section className="overflow-hidden">
-      <h2 className="text-2xl font-semibold text-left mb-3 font-[family-name:var(--font-departure-mono)]">
+    <section className='overflow-hidden'>
+      <h2 className='text-2xl font-semibold text-left mb-3 font-[family-name:var(--font-departure-mono)]'>
         Gallery
       </h2>
       <Swiper
-        effect="cards"
+        effect='cards'
         grabCursor={true}
         modules={[EffectCards]}
-        className="w-60 h-80 my-8 overflow-hidden"
+        className='w-60 h-80 my-8 overflow-hidden'
       >
         {photos.map((photo) => (
           <SwiperSlide
             key={photo.id}
-            className="flex items-center justify-center rounded-lg"
+            className='flex items-center justify-center rounded-lg'
           >
             <Image
               src={photo.src}
               alt={photo.alt}
-              className="w-full h-full object-cover rounded-lg"
+              className='w-full h-full object-cover rounded-lg'
             />
           </SwiperSlide>
         ))}

@@ -1,8 +1,7 @@
 "use client";
 
-import { useState } from "react";
-
 import { Button } from "@/components/ui/button";
+import { useState } from "react";
 
 const AboutSection = () => {
   const [isExpanded, setIsExpanded] = useState(false);
@@ -13,10 +12,10 @@ const AboutSection = () => {
 
   return (
     <section>
-      <h2 className="text-2xl font-semibold text-left mb-3 font-[family-name:var(--font-departure-mono)]">
+      <h2 className='text-2xl font-semibold text-left mb-3 font-[family-name:var(--font-departure-mono)]'>
         About
       </h2>
-      <div className="pr-4">
+      <div className='pr-4'>
         <p
           className={`text-base text-left md:text-justify mb-2 ${
             !isExpanded ? "line-clamp-3" : ""
@@ -26,7 +25,7 @@ const AboutSection = () => {
           efficient, intuitive digital experiences and a passion for turning
           complex challenges into elegant solutions. I&apos;ve had the privilege
           of working on projects that make a real difference. At{" "}
-          <span className="font-[family-name:var(--font-departure-mono)]">
+          <span className='font-[family-name:var(--font-departure-mono)]'>
             IRIS Software Group
           </span>
           , I&apos;m part of the team shaping IRIS Elements, a cloud-based
@@ -37,13 +36,13 @@ const AboutSection = () => {
         </p>
         {isExpanded && (
           <>
-            <p className="text-base text-left md:text-justify mb-2">
+            <p className='text-base text-left md:text-justify mb-2'>
               Before IRIS, I dove deep into the world of finance tech at{" "}
-              <span className="font-[family-name:var(--font-departure-mono)]">
+              <span className='font-[family-name:var(--font-departure-mono)]'>
                 Capgemini
               </span>
               , collaborating with{" "}
-              <span className="font-[family-name:var(--font-departure-mono)]">
+              <span className='font-[family-name:var(--font-departure-mono)]'>
                 DBS Bank
               </span>{" "}
               to develop an Anti-Money Laundering system that helped analysts
@@ -57,8 +56,8 @@ const AboutSection = () => {
         )}
         <Button
           onClick={toggleExpand}
-          variant="link"
-          className="p-0 mb-2 text-blue-500"
+          variant='link'
+          className='p-0 mb-2 text-blue-500'
         >
           {isExpanded ? "Read less" : "Read more"}
         </Button>

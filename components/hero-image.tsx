@@ -1,29 +1,14 @@
 "use client";
 
-import Image from "next/image";
-
-import { useEffect, useState } from "react";
-import { RoughNotation } from "react-rough-notation";
-
+import { useTheme } from "@/context/ThemeContext";
 import anirudhImage from "@/public/images/anirudh.webp";
+import Image from "next/image";
+import { useState } from "react";
+import { RoughNotation } from "react-rough-notation";
 
 const HeroImage = () => {
   const [isHoveringHeroImage, setIsHoveringHeroImage] = useState(false);
-  const [theme, setTheme] = useState<"dark" | "light">("dark");
-
-  useEffect(() => {
-    // Set initial theme class on document
-    document.documentElement.classList.add(theme);
-  }, []);
-
-  const toggleTheme = () => {
-    const newTheme = theme === "dark" ? "light" : "dark";
-    // Remove old theme class
-    document.documentElement.classList.remove(theme);
-    // Add new theme class
-    document.documentElement.classList.add(newTheme);
-    setTheme(newTheme);
-  };
+  const { theme, toggleTheme } = useTheme();
 
   return (
     <RoughNotation
