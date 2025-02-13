@@ -1,13 +1,20 @@
 "use client";
 
+import BodySection from "@/components/body-section";
+import HeroSection from "@/components/hero-section";
+import { useTheme } from "@/context/ThemeContext";
 import { useEffect, useRef } from "react";
 
-import HeroSection from "@/components/hero-section";
-import BodySection from "@/components/body-section";
-
 const Home = () => {
+  const { theme } = useTheme();
+
   const heroSectionRef = useRef<HTMLDivElement>(null);
   const bodySectionRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    document.documentElement.classList.remove("light", "dark");
+    document.documentElement.classList.add(theme);
+  }, [theme]);
 
   useEffect(() => {
     const heroSection = heroSectionRef.current;
@@ -43,18 +50,15 @@ const Home = () => {
   }, []);
 
   return (
-    <div className="flex font-[family-name:var(--font-pp-fragment-glare-light)]">
-      <div className="flex flex-col lg:flex-row w-full">
+    <div className='flex font-[family-name:var(--font-pp-fragment-glare-light)]'>
+      <div className='flex flex-col lg:flex-row w-full'>
         <div
           ref={heroSectionRef}
-          className="lg:sticky lg:top-0 lg:h-screen lg:flex-none"
+          className='lg:sticky lg:top-0 lg:h-screen lg:flex-none'
         >
           <HeroSection />
         </div>
-        <div
-          ref={bodySectionRef}
-          className="grow lg:h-screen overflow-auto"
-        >
+        <div ref={bodySectionRef} className='grow lg:h-screen overflow-auto'>
           <BodySection />
         </div>
       </div>

@@ -1,10 +1,8 @@
+import { Toaster } from "@/components/ui/sonner";
+import { ThemeProvider } from "@/context/ThemeContext"; // Import ThemeProvider
+import { GoogleAnalytics } from "@next/third-parties/google";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
-
-import { GoogleAnalytics } from "@next/third-parties/google";
-
-import { Toaster } from "@/components/ui/sonner";
-
 import "./globals.css";
 
 const ppFragmentGlareLight = localFont({
@@ -28,13 +26,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang='en'>
       <body
         className={`${ppFragmentGlareLight.variable} ${departureMono.variable} antialiased`}
       >
-        {children}
-        <Toaster />
-        <GoogleAnalytics gaId="G-G1BEZ46KNJ" />
+        <ThemeProvider>
+          {children}
+          <Toaster />
+          <GoogleAnalytics gaId='G-G1BEZ46KNJ' />
+        </ThemeProvider>
       </body>
     </html>
   );
