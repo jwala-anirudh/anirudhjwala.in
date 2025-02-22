@@ -87,18 +87,17 @@ const GallerySection = () => {
       effect="cards"
       grabCursor={true}
       modules={[EffectCards]}
-      className="w-60 h-80 my-8 overflow-hidden"
+      className="w-60 h-80 mb-8"
     >
       {photos.map((photo) => (
-        <SwiperSlide
-          key={photo.id}
-          className="flex items-center justify-center rounded-lg"
-        >
-          <Image
-            src={photo.src}
-            alt={photo.alt}
-            className="w-full h-full object-cover rounded-lg"
-          />
+        <SwiperSlide key={photo.id} className="relative rounded-xl">
+          <div className="w-full h-full overflow-hidden rounded-xl">
+            <Image
+              src={photo.src}
+              alt={photo.alt}
+              className="w-full h-full object-cover"
+            />
+          </div>
         </SwiperSlide>
       ))}
     </Swiper>
