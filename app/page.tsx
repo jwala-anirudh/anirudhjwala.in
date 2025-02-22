@@ -2,19 +2,11 @@
 
 import BodySection from "@/components/body-section";
 import HeroSection from "@/components/hero-section";
-import { useTheme } from "@/context/ThemeContext";
 import { useEffect, useRef } from "react";
 
 const Home = () => {
-  const { theme } = useTheme();
-
   const heroSectionRef = useRef<HTMLDivElement>(null);
   const bodySectionRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    document.documentElement.classList.remove("light", "dark");
-    document.documentElement.classList.add(theme);
-  }, [theme]);
 
   useEffect(() => {
     const heroSection = heroSectionRef.current;

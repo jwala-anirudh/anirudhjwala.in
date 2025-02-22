@@ -1,5 +1,4 @@
 import { Toaster } from "@/components/ui/sonner";
-import { ThemeProvider } from "@/context/ThemeContext"; // Import ThemeProvider
 import { GoogleAnalytics } from "@next/third-parties/google";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
@@ -30,11 +29,9 @@ export default function RootLayout({
       <body
         className={`${ppFragmentGlareLight.variable} ${departureMono.variable} antialiased`}
       >
-        <ThemeProvider>
-          {children}
-          <Toaster />
-          <GoogleAnalytics gaId="G-G1BEZ46KNJ" />
-        </ThemeProvider>
+        {children}
+        <Toaster />
+        <GoogleAnalytics gaId="G-G1BEZ46KNJ" />
       </body>
     </html>
   );
