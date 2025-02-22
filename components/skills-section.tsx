@@ -2,7 +2,6 @@
 
 import { Badge } from "@/components/ui/badge";
 import { JSX, useState } from "react";
-// Skill icons
 import { AiOutlineApi } from "react-icons/ai";
 import { BiLogoPostgresql, BiLogoSpringBoot } from "react-icons/bi";
 import {
@@ -60,31 +59,26 @@ const SkillsSection = () => {
   ];
 
   return (
-    <section>
-      <h2 className="text-2xl font-semibold text-left mb-3 font-[family-name:var(--font-departure-mono)]">
-        Skills
-      </h2>
-      <div className="flex flex-wrap gap-2 mb-8">
-        {skillsList.map((skill, index) => (
-          <Badge
-            key={index}
-            variant={hoveredIndex === index ? "secondary" : "outline"}
-            className="rounded-full font-normal text-sm cursor-pointer flex items-center gap-2 transition-colors duration-200"
-            onMouseEnter={() => setHoveredIndex(index)}
-            onMouseLeave={() => setHoveredIndex(null)}
+    <section className="flex flex-wrap gap-2 mb-8">
+      {skillsList.map((skill, index) => (
+        <Badge
+          key={index}
+          variant={hoveredIndex === index ? "secondary" : "outline"}
+          className="rounded-full font-normal text-sm cursor-pointer flex items-center gap-2 transition-colors duration-200"
+          onMouseEnter={() => setHoveredIndex(index)}
+          onMouseLeave={() => setHoveredIndex(null)}
+        >
+          <span
+            style={{
+              color: hoveredIndex === index ? skill.color : "inherit",
+            }}
+            className="transition-colors duration-200"
           >
-            <span
-              style={{
-                color: hoveredIndex === index ? skill.color : "inherit",
-              }}
-              className="transition-colors duration-200"
-            >
-              {skill.icon}
-            </span>
-            {skill.name}
-          </Badge>
-        ))}
-      </div>
+            {skill.icon}
+          </span>
+          {skill.name}
+        </Badge>
+      ))}
     </section>
   );
 };
